@@ -5,33 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sesión de Rodillo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1 class="center-align" id="phase-display">Calentamiento</h1>
-        <p class="center-align number-change" id="display">00:00:00</p>
-        
-        <!-- Icono dinámico de Material Design (bicicleta) -->
-        <div id="icon-container" class="center-align">
-            <i class="material-icons cycling-icon">directions_bike</i>
-        </div>
-
+        <p class="center-align number-change" id="display">00:00</p>
         <div class="row center-align">
             <button id="start-button" class="btn waves-effect waves-light">Comenzar</button>
+            <button id="reset-button" class="btn red waves-effect waves-light" style="display: none;">Reiniciar</button>
         </div>
-
         <div class="pulse-zone">
             <p id="pulse-range">Zona: 50-60% FC máx.</p>
         </div>
-
-        <!-- Barra visual de intensidad -->
-        <div class="progress-bar-container">
-            <div class="progress-bar"></div>
+        <div class="icon">
+            <i id="icon-animation" class="material-icons">directions_bike</i>
+        </div>
+        <div class="zone-bar">
+            <div id="zone-fill" class="zone-fill"></div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="core.js"></script>
 </body>
 </html>

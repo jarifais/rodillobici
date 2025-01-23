@@ -1,11 +1,9 @@
-/* Estilo para el temporizador */
 #display {
     font-size: 2rem;
     text-align: center;
     animation: fadeIn 2s ease-in;
 }
 
-/* Estilo para mostrar cambios de fase con animación */
 #phase-display {
     font-size: 2.5rem;
     text-align: center;
@@ -13,56 +11,64 @@
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Animaciones de entrada */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Zona de pulsaciones */
 .pulse-zone {
     text-align: center;
     font-size: 1.2rem;
-    margin-top: 20px;
-}
-
-/* Animación y color del icono de bicicleta */
-.cycling-icon {
-    font-size: 5rem;
-    color: #4CAF50; /* Color verde */
-    transition: transform 0.5s ease, color 0.5s ease;
-}
-
-.cycling-icon:hover {
-    transform: rotate(360deg); /* Animación de rotación al pasar el ratón */
-    color: #FF5722; /* Cambia a color naranja */
-}
-
-/* Barra de progreso para la zona de pulsaciones */
-.progress-bar-container {
-    width: 100%;
-    height: 25px;
-    background-color: #e0e0e0; /* Color de fondo de la barra */
-    margin-top: 30px;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #4CAF50; /* Color inicial (zona verde) */
-    transition: width 1s ease, background-color 1s ease;
-}
-
-.progress-bar.medium-intensity {
-    background-color: #FFEB3B; /* Color para intensidades medias (zona amarilla) */
-}
-
-.progress-bar.high-intensity {
-    background-color: #FF5722; /* Color para intensidades altas (zona roja) */
 }
 
 .number-change {
     transition: transform 0.5s, opacity 0.5s;
 }
+
+.icon {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.icon i {
+    font-size: 5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.icon i.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.zone-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+}
+
+.zone-fill {
+    height: 100%;
+    width: 0;
+    background-color: green;
+    transition: width 1s ease-in-out;
+}
+
+.zone-1 { background-color: grey; }
+.zone-2 { background-color: lightblue; }
+.zone-3 { background-color: green; }
+.zone-4 { background-color: orange; }
+.zone-5 { background-color: red; }
