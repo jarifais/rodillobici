@@ -1,75 +1,68 @@
-/* Estilo de la pantalla */
+/* Estilo para el temporizador */
 #display {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 20px;
     animation: fadeIn 2s ease-in;
 }
 
-/* Estilo de la fase */
+/* Estilo para mostrar cambios de fase con animación */
 #phase-display {
     font-size: 2.5rem;
     text-align: center;
+    margin-top: 20px;
     animation: fadeIn 1.5s ease-in;
 }
 
-.info {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 15px;
-}
-
-/* Barra de zona de pulsaciones */
-.pulse-zone {
-    width: 100%;
-    background-color: #e0e0e0;
-    height: 25px;
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 20px auto;
-    max-width: 400px;
-    transition: background-color 0.5s ease;
-}
-
-.pulse-bar {
-    width: 0;
-    height: 100%;
-    background-color: #00e676; /* Verde */
-    transition: width 1s ease-in-out, background-color 0.5s ease;
-}
-
-/* Animaciones */
+/* Animaciones de entrada */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-.icon {
+/* Zona de pulsaciones */
+.pulse-zone {
     text-align: center;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-top: 20px;
 }
 
-.material-icons.large {
-    font-size: 4rem;
-    animation: bounceIn 1s;
+/* Animación y color del icono de bicicleta */
+.cycling-icon {
+    font-size: 5rem;
+    color: #4CAF50; /* Color verde */
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
-/* Animación BounceIn */
-@keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+.cycling-icon:hover {
+    transform: rotate(360deg); /* Animación de rotación al pasar el ratón */
+    color: #FF5722; /* Cambia a color naranja */
+}
+
+/* Barra de progreso para la zona de pulsaciones */
+.progress-bar-container {
+    width: 100%;
+    height: 25px;
+    background-color: #e0e0e0; /* Color de fondo de la barra */
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50; /* Color inicial (zona verde) */
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.progress-bar.medium-intensity {
+    background-color: #FFEB3B; /* Color para intensidades medias (zona amarilla) */
+}
+
+.progress-bar.high-intensity {
+    background-color: #FF5722; /* Color para intensidades altas (zona roja) */
 }
 
 .number-change {
     transition: transform 0.5s, opacity 0.5s;
-}
-
-.number-change-exit {
-    transform: scale(0.5);
-    opacity: 0;
-}
-
-.number-change-enter {
-    transform: scale(1.5);
-    opacity: 1;
 }
