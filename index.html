@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión de Rodillo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align" id="phase-display">Calentamiento</h1>
+        <p class="center-align number-change" id="display">00:00:00</p>
+        
+        <!-- Fase e Información -->
+        <div class="info">
+            <i id="phase-icon" class="material-icons large">whatshot</i>
+            <p id="phase-info">Fase: Calentamiento</p>
+            <p id="pulse-info">Zona de pulso: 50-60% FC máx.</p>
+        </div>
+
+        <!-- Barra de Zona de Pulso -->
+        <div class="pulse-zone">
+            <div class="pulse-bar" id="pulse-bar"></div>
+        </div>
+
+        <!-- Botón de Control -->
+        <div class="row center-align">
+            <button id="start-button" class="btn waves-effect waves-light">Comenzar</button>
+            <button id="reset-button" class="btn red waves-effect waves-light" style="display:none;">Reiniciar</button>
+        </div>
+
+        <!-- Icono visual para la fase -->
+        <div class="icon">
+            <i class="material-icons large">directions_bike</i>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="core.js"></script>
+</body>
+</html>

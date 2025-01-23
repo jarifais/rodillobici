@@ -1,0 +1,75 @@
+/* Estilo de la pantalla */
+#display {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Estilo de la fase */
+#phase-display {
+    font-size: 2.5rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.info {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+/* Barra de zona de pulsaciones */
+.pulse-zone {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 400px;
+    transition: background-color 0.5s ease;
+}
+
+.pulse-bar {
+    width: 0;
+    height: 100%;
+    background-color: #00e676; /* Verde */
+    transition: width 1s ease-in-out, background-color 0.5s ease;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.icon {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.material-icons.large {
+    font-size: 4rem;
+    animation: bounceIn 1s;
+}
+
+/* Animación BounceIn */
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.number-change {
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.number-change-exit {
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.number-change-enter {
+    transform: scale(1.5);
+    opacity: 1;
+}
